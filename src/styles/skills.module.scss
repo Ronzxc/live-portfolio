@@ -1,0 +1,55 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    text-align: center;
+    background: #fff;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    border: 5px solid black;
+    display: inline-block;
+    color: black;
+    letter-spacing: 5px;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* Section titles for "Using Now", "Learning", and "Different" */
+  .skillSection {
+    margin-top: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  
+  /* Flexbox for skills */
+  .skillList {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .skill {
+    background: black;
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    min-width: 100px;
+    text-align: center;
+  }
+  

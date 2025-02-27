@@ -1,0 +1,57 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Centers content vertically
+    align-items: center; // Centers content horizontally
+    height: 100vh; // Makes it take up the full screen height
+    text-align: center;
+    background: #fff;
+  
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 1rem 1rem;
+        border: 5px solid black;
+        display: inline-block;
+        color: black;
+    }
+  
+    p {
+      color: #666;
+      margin-bottom: 2rem;
+    }
+  
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  
+      input, textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+  
+      textarea {
+        height: 100px;
+      }
+  
+      button {
+        background: black;
+        color: white;
+        border: none;
+        padding: 0.8rem;
+        cursor: pointer;
+        transition: 0.3s;
+  
+        &:hover {
+          background: gray;
+        }
+      }
+    }
+  }
+  

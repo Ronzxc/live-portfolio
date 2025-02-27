@@ -1,0 +1,46 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Centers content vertically
+    align-items: center; // Centers content horizontally
+    height: 100vh; // Makes it take up the full screen height
+    text-align: center;
+    background: #fff;
+  }
+  
+.container {
+    max-width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+  
+h1 {
+    font-family: "Dancing Script", serif;
+    font-size: 3rem;
+    
+    span {
+        font-weight: bold;
+        color: black;
+    }
+}
+  
+h2 {
+    font-size: 1.5rem;
+    color: #555;
+}
+  
+.socialLinks {
+    margin-top: 1rem;
+    
+    a {
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 2rem;
+        color: #333;
+        transition: 0.3s;
+  
+        &:hover {
+            color: gray;
+        }
+    }
+}
