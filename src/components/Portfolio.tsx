@@ -1,21 +1,27 @@
 import React, { useState } from "react";
 import styles from "../styles/portfolio.module.scss";
 
-const Portfolio: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("Frontend");
+interface Project {
+  name: string;
+  description: string;
+  info: string;
+}
 
-  const projects = {
-    Frontend: [
-      { name: "SMS Fraud Detection", description: "Comparison of 3 AI models for detecting SMS fraud (Reactjs & Flask)", info: "https://github.com/omzkiii/FraudDetectionComparison" },
-      { name: "frontend-crud-exam", description: "Designing the front-end of User Management and functionality of CRUD (React, Reactstrap, & SASS)", info: "https://github.com/Ronzxc/frontend-crud-exam" },
-      { name: "Danpass", description: "A secured and fully working login/Signup for safekeeping of passwords in every accounts", info: "https://danpass.xyz/#/auth/signin" },
-    ],
-    Backend: [
-      { name: "Bankers Algorithm", description: "Develop a Java simulation for Deadlock Detection in operating systems.", info: "https://github.com/Ronzxc/bankers-algo" },
-      { name: "Batch Queue Algortihm", description: "Develop a Java simulation for Batch Queue in operating systems.", info: "#https://github.com/Ronzxc/ProjectOS" },
-      { name: "Email Automation", description: "automation of clock in and clock out email.", info: "https://github.com/Ronzxc/email-automation" },
-    ],
-  };
+const projects: Record<"Frontend" | "Backend", Project[]> = {
+  Frontend: [
+    { name: "SMS Fraud Detection", description: "Comparison of 3 AI models for detecting SMS fraud (Reactjs & Flask)", info: "https://github.com/omzkiii/FraudDetectionComparison" },
+    { name: "frontend-crud-exam", description: "Designing the front-end of User Management and functionality of CRUD (React, Reactstrap, & SASS)", info: "https://github.com/Ronzxc/frontend-crud-exam" },
+    { name: "Danpass", description: "A secured and fully working login/Signup for safekeeping of passwords in every accounts", info: "https://danpass.xyz/#/auth/signin" },
+  ],
+  Backend: [
+    { name: "Bankers Algorithm", description: "Develop a Java simulation for Deadlock Detection in operating systems.", info: "https://github.com/Ronzxc/bankers-algo" },
+    { name: "Batch Queue Algortihm", description: "Develop a Java simulation for Batch Queue in operating systems.", info: "#https://github.com/Ronzxc/ProjectOS" },
+    { name: "Email Automation", description: "automation of clock in and clock out email.", info: "https://github.com/Ronzxc/email-automation" },
+  ],
+};
+
+const Portfolio: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<keyof typeof projects>("Frontend");
 
   return (
     <section id="portfolio" className={styles.portfolio}>
@@ -37,7 +43,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         <div className={styles.projects}>
-          {projects[activeTab].map((project, index) => (
+          {projects[activeTab].map((project: Project, index: number) => (
             <div key={index} className={styles.project}>
               <h3>{project.name}</h3>
               <p>{project.description}</p>

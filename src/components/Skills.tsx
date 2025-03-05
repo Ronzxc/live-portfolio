@@ -22,7 +22,7 @@ const Skills: React.FC = () => {
           <h3 className={styles.sectionTitle}>Learning:</h3>
           <div className={styles.skillList}>
             <div className={styles.skill}>NodeJs</div>
-            <div className={styles.skill}>ReactJs</div>
+            <div className={styles.skill}>React</div>
             <div className={styles.skill}>CSS</div>
           </div>
         </div>
@@ -31,7 +31,7 @@ const Skills: React.FC = () => {
           <h3 className={styles.sectionTitle}>Different:</h3>
           <div className={styles.skillList}>
             <div className={styles.skill}>C++</div>
-            <div className={styles.skill}>C</div>
+            <div className={styles.skill}>Java</div>
             <div className={styles.skill}>Python</div>
           </div>
         </div>
